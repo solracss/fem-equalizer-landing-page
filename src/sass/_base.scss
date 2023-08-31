@@ -1,0 +1,188 @@
+@use "sass:math";
+@use "sass:map";
+
+// funcrions
+@function remSize($size) {
+	$remSize: math.div($size, 16px);
+	@return #{$remSize}rem;
+}
+
+// mixins
+@mixin setHslaColor($property, $hslcolor, $alpha: 1) {
+	#{$property}: hsla(
+		hue($hslcolor),
+		saturation($hslcolor),
+		lightness($hslcolor),
+		$alpha
+	);
+}
+
+@mixin pseudo($type: before, $pos: absolute, $content: "") {
+	position: relative;
+	&::#{$type} {
+		content: $content;
+		position: $pos;
+		@content;
+	}
+}
+
+$breakpoints: (
+	small: remSize(640px),
+	medium: remSize(768px),
+	large: remSize(1024px),
+);
+
+@mixin media($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+@mixin media-down($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+// colors
+$clr-neutral-100: hsl(0, 0%, 100%);
+$clr-neutral-400: hsl(20, 33%, 98%);
+
+$clr-primary-400: hsl(244, 23%, 12%);
+
+$clr-secondary-300: hsl(33, 100%, 70%);
+$clr-secondary-400: hsl(12, 94%, 65%);
+
+$clr-accent-400: hsl(177, 68%, 64%);
+
+$colors: (
+	"neutral": (
+		"100": $clr-neutral-100,
+		"400": $clr-neutral-400,
+	),
+	"primary": (
+		"400": $clr-primary-400,
+	),
+	"secondary": (
+		"300": $clr-secondary-300,
+		"400": $clr-secondary-400,
+	),
+	"accent": (
+		"400": $clr-accent-400,
+	),
+);
+
+// typography
+$ff-base: "set your font here";
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-40: 2.5rem;
+$fs-88: 5.5rem;
+
+$font-sizes: (
+	"16": 1rem,
+	"18": 1.125rem,
+	"20": 1.25rem,
+	"40": 2.5rem,
+	"88": 5.5rem,
+);
+
+// utility classes
+
+@each $size-name, $size-value in $font-sizes {
+	.fs-#{$size-name} {
+		font-size: #{$size-value};
+	}
+}
+
+@each $color, $shade-map in $colors {
+	@each $shade, $value in $shade-map {
+		.clr-#{$color}-#{$shade} {
+			color: $value;
+		}
+		.bg-#{$color}-#{$shade} {
+			background-color: $value;
+		}
+	}
+}
+
+.fw-regular {
+	font-weight: $fw-regular;
+}
+
+.fw-bold {
+	font-weight: $fw-bold;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.fw-bold {
+	font-weight: $fw-bold;
+}
+
+.container {
+	width: min(100% - 3rem, 69.375rem);
+	margin-inline: auto;
+}
+
+.flex-flow {
+	display: flex;
+}
+
+.grid-flow {
+	display: grid;
+	gap: 1rem;
+}
+
+.heading-1 {
+	font-size: $fs-88;
+	font-weight: $fw-bold;
+	line-height: remSize(88px);
+	letter-spacing: -1px;
+}
+
+.heading-2 {
+	font-size: $fs-40;
+	line-height: remSize(52px);
+}
+
+.txt-wide-20 {
+	font-size: $fs-20;
+	font-weight: $fw-regular;
+	line-height: remSize(34px);
+}
+
+.txt-narrow-16 {
+	font-size: $fs-16;
+	font-weight: $fw-regular;
+	line-height: remSize(26px);
+}

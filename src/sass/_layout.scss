@@ -1,11 +1,12 @@
 @use "./base" as *;
 
 body {
-	// font-size: $fs-16;
-	// font-weight: $fw-regular;
-	// font-family: $ff-base;
-	// color: $clr-primary-400;
-	// background-color: $clr-primary-200;
+	font-size: $fs-16;
+	font-weight: $fw-regular;
+	font-family: $ff-base;
+	color: $clr-primary-400;
+	min-height: 100vh;
+	min-height: 100dvh;
 .header {
 	padding-top: 2.5rem;
 

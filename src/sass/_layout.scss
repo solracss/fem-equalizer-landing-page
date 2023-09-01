@@ -6,4 +6,11 @@ body {
 	// font-family: $ff-base;
 	// color: $clr-primary-400;
 	// background-color: $clr-primary-200;
+.header {
+	padding-top: 2.5rem;
+
+	@include media(medium) {
+		padding-top: 3.875rem;
+	}
+}
 }

@@ -50,4 +50,8 @@ button.btn {
 			box-shadow: 0 0 0 4px scale-color($clr-secondary-300, $lightness: -10%);
 		}
 	}
+
+	&-block {
+		width: 100%;
+	}
 }

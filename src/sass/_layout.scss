@@ -7,6 +7,10 @@ body {
 	color: $clr-primary-400;
 	min-height: 100vh;
 	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
 .header {
 	padding-top: 2.5rem;
 
@@ -14,4 +18,12 @@ body {
 		padding-top: 3.875rem;
 	}
 }
+
+footer {
+	margin-top: auto;
+	padding-block: 4rem;
+
+	@include media(medium) {
+		padding-block: 5.5rem;
+	}
 }

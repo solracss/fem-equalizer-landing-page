@@ -6,7 +6,6 @@ button.btn {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	line-height: 1.1;
 
 	&:focus {
 		outline-style: solid;
@@ -15,11 +14,16 @@ button.btn {
 }
 
 .btn {
+	gap: 0.5rem;
 	padding: 0.8em;
 	font-size: $fs-18;
 	font-weight: $fw-bold;
 	line-height: 2rem;
 	border-radius: 0.75rem;
+
+	&:focus {
+		box-shadow: 0 0 0 4px scale-color($clr-accent-400, $lightness: -10%);
+	}
 
 	&-dark {
 		background-color: $clr-primary-400;
@@ -29,10 +33,6 @@ button.btn {
 		&:hover,
 		&:active {
 			background-color: $clr-accent-400;
-		}
-
-		&:focus {
-			box-shadow: 0 0 0 4px scale-color($clr-accent-400, $lightness: -10%);
 		}
 	}
 
@@ -44,10 +44,6 @@ button.btn {
 		&:hover,
 		&:active {
 			background-color: $clr-secondary-300;
-		}
-
-		&:focus {
-			box-shadow: 0 0 0 4px scale-color($clr-secondary-300, $lightness: -10%);
 		}
 	}
 

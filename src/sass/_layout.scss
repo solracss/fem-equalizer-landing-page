@@ -47,6 +47,69 @@ body {
 	}
 }
 
+.cta {
+	$border-radius: 12px;
+
+	position: relative;
+	padding-top: 6rem;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 600px;
+		background-image: url(../public/img/bg-pattern-2.svg);
+		background-position: top 0 left 50%;
+		background-repeat: no-repeat;
+		background-size: 17.5rem;
+		border-radius: $border-radius;
+	}
+
+	&-phoneImg {
+		position: absolute;
+		height: 430px;
+		transform: translateY(-100px);
+	}
+
+	&-box {
+		margin-top: 386px;
+		padding: 48px 36px;
+		border-radius: $border-radius;
+	}
+
+	&-heading {
+		font-size: $fs-32;
+		font-weight: $fw-bold;
+	}
+
+	&-description {
+		margin-top: 12px;
+		font-size: $fs-18;
+		line-height: remSize(28px);
+	}
+
+	&-price {
+		margin: 2rem 0;
+		gap: 1rem;
+		align-items: center;
+		font-weight: $fw-bold;
+
+		& .price {
+			font-size: $fs-64;
+			line-height: 52px;
+		}
+
+		& .duration {
+			font-size: $fs-20;
+			font-weight: $fw-regular;
+		}
+	}
+
+	.btn + .btn {
+		margin-top: 1rem;
+	}
+}
+
 footer {
 	margin-top: auto;
 	padding-block: 4rem;

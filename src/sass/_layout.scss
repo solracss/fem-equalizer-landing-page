@@ -19,6 +19,34 @@ body {
 	}
 }
 
+.top-section {
+	padding-block: remSize(64px);
+
+	@include media(medium) {
+		padding-block: remSize(96px);
+	}
+
+	p {
+		margin-top: 1.25rem;
+
+		@include media(medium) {
+			margin-top: 1.75rem;
+			font-size: $fs-18;
+		}
+		@include media(large) {
+			margin-top: 2.5rem;
+			font-size: $fs-20;
+		}
+	}
+
+	& .top-section-wrapper {
+		max-width: 32rem;
+		@include media(large) {
+			max-width: 53rem;
+		}
+	}
+}
+
 footer {
 	margin-top: auto;
 	padding-block: 4rem;

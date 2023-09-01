@@ -92,6 +92,7 @@ $fs-16: 1rem;
 $fs-18: 1.125rem;
 $fs-20: 1.25rem;
 $fs-40: 2.5rem;
+$fs-64: 4rem;
 $fs-88: 5.5rem;
 
 $font-sizes: (
@@ -99,6 +100,7 @@ $font-sizes: (
 	"18": 1.125rem,
 	"20": 1.25rem,
 	"40": 2.5rem,
+	"64": 4rem,
 	"88": 5.5rem,
 );
 
@@ -182,10 +184,21 @@ $font-sizes: (
 }
 
 .heading-1 {
-	font-size: $fs-88;
+	font-size: $fs-40;
+	line-height: 3rem;
+
 	font-weight: $fw-bold;
-	line-height: remSize(88px);
 	letter-spacing: -1px;
+
+	@include media(medium) {
+		font-size: $fs-64;
+		line-height: $fs-64;
+	}
+
+	@include media(large) {
+		font-size: $fs-88;
+		line-height: $fs-88;
+	}
 }
 
 .heading-2 {

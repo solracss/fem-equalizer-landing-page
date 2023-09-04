@@ -51,7 +51,11 @@ body {
 	$border-radius: 12px;
 
 	position: relative;
-	padding-top: 6rem;
+	margin-top: 6rem;
+
+	@include media(medium) {
+		margin-bottom: 6rem;
+	}
 
 	&-wrapper {
 		display: flex;
@@ -63,18 +67,38 @@ body {
 		background-repeat: no-repeat;
 		background-size: 17.5rem;
 		border-radius: $border-radius;
+
+		@include media(medium) {
+			position: relative;
+			background-position: top -20% left 50%;
+			padding-inline: 64px;
+			align-items: start;
+		}
 	}
 
 	&-phoneImg {
 		position: absolute;
 		height: 430px;
 		transform: translateY(-100px);
+
+		@include media(medium) {
+			position: absolute;
+			height: 556px;
+			transform: translateY(-130px);
+		}
 	}
 
 	&-box {
 		margin-top: 386px;
 		padding: 48px 36px;
 		border-radius: $border-radius;
+
+		@include media(medium) {
+			position: absolute;
+			max-width: 399px;
+			right: 6%;
+			bottom: -17%;
+		}
 	}
 
 	&-heading {

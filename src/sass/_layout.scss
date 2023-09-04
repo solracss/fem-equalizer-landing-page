@@ -66,7 +66,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		min-height: 600px;
+		min-height: 37.5rem;
 		background-image: url(../public/img/bg-pattern-2.svg);
 		background-position: top 0 left 50%;
 		background-repeat: no-repeat;
@@ -89,36 +89,36 @@ body {
 
 	&-phoneImg {
 		position: absolute;
-		height: 430px;
+		height: remSize(430px);
 		transform: translateY(-100px);
 
 		@include media(medium) {
 			position: absolute;
-			height: 556px;
-			transform: translateY(-130px);
+			height: remSize(556px);
+			transform: translateY(-8.125rem);
 		}
 
 		@include media(large) {
-			height: 642px;
-			transform: translateY(-215px);
+			height: remSize(642px);
+			transform: translateY(-13.4375rem);
 		}
 	}
 
 	&-box {
-		margin-top: 386px;
-		padding: 48px 36px;
+		margin-top: 24.125rem;
+		padding: 3rem 2.25rem;
 		border-radius: $border-radius;
 
 		@include media(medium) {
 			position: absolute;
-			max-width: 399px;
+			max-width: 25rem;
 			right: 6%;
 			bottom: -17%;
 		}
 
 		@include media(large) {
-			max-width: 446px;
-			padding: 58px 54px 48px;
+			max-width: 27.875rem;
+			padding: 3.625rem 3.375rem 3rem;
 			right: 8%;
 			bottom: -20%;
 		}
@@ -130,12 +130,12 @@ body {
 	}
 
 	&-description {
-		margin-top: 12px;
+		margin-top: 0.75rem;
 		font-size: $fs-18;
 		line-height: remSize(28px);
 
 		@include media(large) {
-			margin-top: 22px;
+			margin-top: 1.375rem;
 			line-height: remSize(34px);
 		}
 	}
@@ -152,7 +152,7 @@ body {
 
 		& .price {
 			font-size: $fs-64;
-			line-height: 52px;
+			line-height: 3.25rem;
 		}
 
 		& .duration {

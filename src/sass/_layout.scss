@@ -166,11 +166,38 @@ body {
 	}
 }
 
-footer {
+.footer {
 	margin-top: auto;
 	padding-block: 4rem;
 
 	@include media(medium) {
 		padding-block: 5.5rem;
+	}
+
+	&-rights {
+		margin: 2rem 0 4rem;
+		line-height: remSize(26px);
+		max-width: 21rem;
+		@include media(medium) {
+			max-width: 22.875rem;
+		}
+	}
+
+	&-mail {
+		color: #000;
+		font-weight: $fw-bold;
+	}
+
+	&-social {
+		gap: 1.5rem;
+	}
+
+	&-icon {
+		fill: #000;
+		transition: fill 0.3s;
+
+		&:hover {
+			fill: $clr-secondary-400;
+		}
 	}
 }

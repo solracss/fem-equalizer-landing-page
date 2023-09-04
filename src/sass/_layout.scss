@@ -9,6 +9,25 @@ body {
 	min-height: 100dvh;
 	display: flex;
 	flex-direction: column;
+
+	background: url("/img/bg-main-mobile.png") no-repeat top -17.25rem right -13.5rem;
+
+	@include media(medium) {
+		background-image: url("/img/bg-main-tablet.png");
+
+		@include pseudo {
+			background-image: url(../public/img/bg-pattern-1.svg);
+			background-size: contain;
+			right: 0;
+			top: 0;
+			width: remSize(265px);
+			height: remSize(398px);
+		}
+	}
+
+	@include media(large) {
+		background-image: url("/img/bg-main-desktop.png");
+	}
 }
 
 .header {

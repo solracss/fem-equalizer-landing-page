@@ -178,8 +178,15 @@ body {
 		margin: 2rem 0 4rem;
 		line-height: remSize(26px);
 		max-width: 21rem;
+
 		@include media(medium) {
+			margin: 0;
 			max-width: 22.875rem;
+			grid-area: 2/1/2/2;
+		}
+
+		@include media(large) {
+			grid-area: 1/2/1/3;
 		}
 	}
 
@@ -190,6 +197,16 @@ body {
 
 	&-social {
 		gap: 1.5rem;
+
+		@include media(medium) {
+			grid-area: 2/2/2/2;
+			align-self: center;
+			justify-self: end;
+		}
+
+		@include media(large) {
+			grid-area: 1/3/1/4;
+		}
 	}
 
 	&-icon {
@@ -198,6 +215,26 @@ body {
 
 		&:hover {
 			fill: $clr-secondary-400;
+		}
+	}
+
+	&-logo {
+		@include media(medium) {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+	}
+
+	& > .container {
+		@include media(medium) {
+			display: grid;
+			row-gap: 2rem;
+			grid-template-columns: remSize(366px) 1fr;
+			grid-template-rows: auto auto;
+		}
+
+		@include media(large) {
+			grid-template-columns: remSize(285px) remSize(366px) 1fr;
+			grid-template-rows: auto;
 		}
 	}
 }

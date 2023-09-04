@@ -59,10 +59,7 @@ body {
 	}
 
 	& .top-section-wrapper {
-		max-width: 32rem;
-		@include media(large) {
-			max-width: 53rem;
-		}
+		width: clamp(32rem, 65vw, 53rem);
 	}
 }
 

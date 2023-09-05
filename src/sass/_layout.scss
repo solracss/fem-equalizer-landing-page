@@ -19,7 +19,7 @@ body {
 			background-image: url(../public/img/bg-pattern-1.svg);
 			background-size: contain;
 			right: 0;
-			top: 0;
+			top: -2%;
 			width: remSize(265px);
 			height: remSize(398px);
 		}
@@ -72,6 +72,7 @@ body {
 	margin-top: 6rem;
 
 	@include media(medium) {
+		margin-top: 9.5rem;
 		margin-bottom: 6rem;
 	}
 

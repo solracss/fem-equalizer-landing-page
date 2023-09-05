@@ -40,3 +40,39 @@ npm run dev
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,vscode,vite)](https://skillicons.dev)
 
 ### What I learned
+
+1. Keep footer always on bootom of page
+
+```css
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	margin-top: auto;
+}
+```
+
+other way with grid, worth to add some margin-top for footer
+
+```css
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto; // depends how many parts page have
+}
+```
+
+2. Work with positioning elements. Whole middle section required to position phone image and cta box differently depending on what screen size user displays page.
+
+3. Use `clamp` for dynamic width for heading
+
+```css
+.top-section-wrapper {
+	width: clamp(32rem, 65vw, 53rem);
+}
+```
+
+4. Work with `grid` to display footer elements.
+
+5. Use styles for button links as predefined component class.

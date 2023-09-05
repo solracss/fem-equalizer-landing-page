@@ -59,7 +59,9 @@ body {
 	}
 
 	& .top-section-wrapper {
-		width: clamp(32rem, 65vw, 53rem);
+		@include media(medium) {
+			width: clamp(32rem, 65vw, 53rem);
+		}
 	}
 }
 

@@ -1,4 +1,5 @@
-## [LIVE SITE](https://solracss.github.io/fem-equalizer-landing-page/)
+# Deployed site
+[![live](https://github.com/solracss/fem-equalizer-landing-page/assets/19937659/8f3ca94f-9136-4725-b53f-a13b215dde0a)](https://solracss.github.io/fem-equalizer-landing-page/)
 
 # Frontend Mentor - [Equalizer landing page ](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE).
 

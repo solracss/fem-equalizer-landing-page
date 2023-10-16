@@ -1,3 +1,5 @@
+## [LIVE SITE](https://solracss.github.io/fem-equalizer-landing-page/)
+
 # Frontend Mentor - [Equalizer landing page ](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE).
 
 ## Table of contents
@@ -28,10 +30,6 @@ Users should be able to:
 npm install
 npm run dev
 ```
-
-### Links
-
-- Live Site URL: [Live](https://solracss.github.io/fem-equalizer-landing-page/)
 
 ## My process
 
